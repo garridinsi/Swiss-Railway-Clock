@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>SBB Clock</title>
     <link rel="stylesheet" href="style.css"/>
+
 </head>
 <body>
 <div class="demo-container clocks single">
@@ -19,10 +20,16 @@
         </div>
     </article>
 </div>
-<footer>
+<footer id="footer">
     Made by <a href="http://meister.io">meister.io</a>  |  CSS by <a href="https://cssanimation.rocks/">cssanimation.rocks</a><br/>
     Design by Hans Hilfiker | © by Mondaine & SBB CFF FFS
 </footer>
 <script src="script.js"></script>
+<script>
+const urlParams = new URLSearchParams(document.location.search);
+if(urlParams.get("hidefooter")){
+    document.getElementById("footer").style.display = "none";
+}
+</script>
 </body>
 </html>
